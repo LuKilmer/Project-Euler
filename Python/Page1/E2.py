@@ -11,10 +11,7 @@ def fibonacci(n):
         y=aux
         aux=x
         x+=y
-        total+=sumCounter(x)
+        if x%2==0: total+=x
     return aux,total
-def sumCounter(n):
-    if n%2==0:return n
-    else:return 0
 answer=fibonacci(4000000)
 print(f'the result was up to {answer[0]} and its sum of even numbers was {answer[1]}')
